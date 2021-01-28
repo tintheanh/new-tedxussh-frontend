@@ -1,0 +1,20 @@
+@import '../../../styles/global.scss';
+
+.container {
+	@include container;
+	@include flex-row;
+	justify-content: space-between;
+	padding: 42px 0;
+
+	@include md {
+		@include flex-col;
+		padding-bottom: 0;
+		padding-top: 22px;
+	}
+
+	@include sm {
+		@include flex-col;
+		padding-bottom: 0;
+		padding-top: 10px;
+	}
+}

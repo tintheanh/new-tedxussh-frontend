@@ -1,0 +1,25 @@
+@import '../../../../../styles/global.scss';
+
+.sectionWrapper {
+	width: 32.6%;
+
+	.image {
+		width: 100%;
+		display: block;
+	}
+
+	.textWrapper {
+		text-align: center;
+}
+
+	.title {
+    font-size: 20px;
+    padding: 22px 0;
+  }
+  
+  .text {
+    font-size: 14px;
+    color: $paragraphColor;
+    line-height: 1.5;
+  }
+}

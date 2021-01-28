@@ -1,0 +1,77 @@
+@import '../../../styles/global.scss';
+
+.container {
+	background: #121212;
+	padding: 56px 0;
+
+	.wrapper {
+		@include container;
+		@include flex-row;
+        justify-content: space-between;
+        
+        @include md {
+            @include flex-col;
+        }
+
+		div {
+			width: 32.6%;
+			text-align: center;
+            font-size: 14px;
+
+            @include md {
+                width: 100%;
+                padding-bottom: 22px;
+            }
+
+            @include sm {
+                font-size: 12px;
+            }
+		}
+
+		.smallNav {
+			color: $lessBrightGray;
+
+			div {
+				width: 100%;
+			}
+
+			.icon {
+                width: 22px;
+                height: 22px;
+                margin: 0 6px;
+			}
+		}
+
+		.center {
+            color: $brightGray;
+            
+            .ted {
+                color: $lessBrightGray;
+            }
+		}
+
+		.right {
+			color: $lessBrightGray;
+		}
+	}
+
+	.copyright {
+        @include container;
+		text-align: center;
+		color: $brightGray;
+		font-size: 14px;
+        padding-top: 152px;
+        
+        @include md {
+            padding-top: 52px;
+        }
+
+        @include sm {
+            font-size: 12px;
+        }
+    }
+    
+    .text {
+        line-height: 1.7;
+    }
+}

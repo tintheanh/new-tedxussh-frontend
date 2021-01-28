@@ -1,0 +1,110 @@
+@import '../../../../../styles/global.scss';
+
+.cover {
+	height: 100vh;
+	position: relative;
+
+	.image {
+		width: 100%;
+		height: 100% !important;
+		position: absolute;
+		top: 0;
+		left: 0;
+		object-fit: cover;
+	}
+
+	@include ar-max(1.3) {
+		height: 52vh;
+	}
+
+	@include lg {
+		height: 65vh;
+	}
+
+	@include sm {
+		height: 55vh;
+	}
+
+	@include ar-min(16/9.5) {
+		height: 100vh;
+	}
+
+	.introductionWrapper {
+		@include container;
+		position: relative;
+		height: 100%;
+		z-index: 1000;
+
+		.introduction {
+			position: absolute;
+			bottom: 0;
+			width: 50%;
+			color: $white;
+			padding-bottom: 54px;
+
+			@include rwd-max(916) {
+				width: 100%;
+			}
+
+			@include rwd-max(916) {
+				padding-bottom: 38px;
+			}
+
+			@include sm {
+				padding-bottom: 28px;
+			}
+
+			.title {
+				font-size: 54px;
+
+				@include rwd-max(1364) {
+					font-size: 38x;
+				}
+
+				@include rwd-max(1025) {
+					font-size: 28px;
+				}
+
+				@include rwd-max(482) {
+					font-size: 26px;
+				}
+
+				@include sm {
+					font-size: 24px;
+				}
+			}
+
+			.description {
+				font-size: 18px;
+				line-height: 1.5;
+				margin: 18px 0;
+
+				@include rwd-max(1364) {
+					font-size: 16px;
+				}
+
+				@include rwd-max(812) {
+					font-size: 14px;
+				}
+
+				@include sm {
+					font-size: 12px;
+				}
+			}
+
+			.explore {
+				font-size: 16px;
+				padding: 12px 22px;
+				border: 2px solid $white;
+
+				@include rwd-max(1364) {
+					font-size: 14px;
+				}
+
+				@include rwd-max(916) {
+					font-size: 12px;
+				}
+			}
+		}
+	}
+}

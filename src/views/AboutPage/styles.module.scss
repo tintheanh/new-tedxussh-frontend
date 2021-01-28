@@ -1,0 +1,11 @@
+@import '../../../styles/global.scss';
+
+.container {
+	@include container;
+
+	.tileWrapper {
+    @include flex-row;
+    justify-content: space-between;
+    width: 100%; 
+	}
+}

@@ -1,0 +1,164 @@
+@import '../../../styles/global.scss';
+
+.wrapper {
+	transition: 0.2s linear all;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 2000;
+
+	.container {
+		@include container;
+		@include flex-row;
+
+		justify-content: space-between;
+
+		.logoWrapper {
+			.logo {
+				cursor: pointer;
+
+				@include xl {
+					width: 240px;
+				}
+
+				@include lg {
+					width: 240px;
+				}
+
+				@include md {
+					width: 223px;
+				}
+
+				@include sm {
+					width: 132px;
+				}
+			}
+		}
+
+		.liContainer {
+			@include flex-col;
+			justify-content: center;
+
+			.iconWrapper {
+				width: 22px;
+				padding: 4px;
+				display: none;
+				z-index: 3000;
+
+				.close {
+					color: gray;
+				}
+
+				.open {
+					color: $brightGray;
+				}
+
+				@include md {
+					@include flex-col;
+					justify-content: center;
+
+					@include sm {
+						width: 16px;
+					}
+				}
+			}
+
+			.liWrapper {
+				@include flex-row;
+
+				@include md {
+					display: none;
+				}
+
+				.onlyWordsWrapper {
+					@include flex-col;
+					justify-content: center;
+
+					.onlyWords {
+						height: fit-content;
+						color: $brightGray;
+
+						.li {
+							font-weight: 400;
+							font-style: normal;
+							text-transform: uppercase;
+							font-size: 14px;
+							letter-spacing: 1.2px;
+							padding: 0 12px;
+
+							@include rwd-max(844) {
+								font-size: 12px;
+							}
+						}
+
+						.li:nth-of-type(1) {
+							padding: 0 12px 0 0;
+						}
+
+						.eventUpdate {
+							border: 1px solid $brightGray;
+							padding-top: 6px;
+							padding-bottom: 6px;
+						}
+
+						.eventUpdateHighlighted {
+							border-color: $darkGray;
+						}
+					}
+
+					.wordsHighlighted {
+						color: $darkGray;
+					}
+				}
+
+				.lang {
+					height: 20px;
+					width: 32px;
+					padding: 0 4px;
+				}
+
+				.lang:nth-of-type(1) {
+					padding: 0 4px 0 12px;
+				}
+
+				.lang:last-child {
+					padding: 0 0 0 4px;
+				}
+			}
+		}
+	}
+}
+
+.navHighlighted {
+	background: white;
+}
+
+.navNotHighlighted {
+	padding-top: 20px;
+	background: none;
+}
+
+.overlay {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	transition: all 0.3s ease-in-out;
+}
+
+.overlayShow {
+	background: rgba(0, 0, 0, 0.7);
+	z-index: 1000;
+	visibility: visible;
+	opacity: 1;
+}
+
+.overlayNotShow {
+	background: none;
+	visibility: hidden;
+	opacity: 0;
+}

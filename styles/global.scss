@@ -1,0 +1,90 @@
+@mixin flex-row {
+	display: flex;
+	flex-direction: row;
+}
+
+@mixin flex-col {
+	display: flex;
+	flex-direction: column;
+}
+
+$white: white;
+$black: black;
+$brightGray: rgba(255, 255, 255, 0.6);
+$lessBrightGray:  rgba(255, 255, 255, 0.3);
+$darkGray: rgba(0, 0, 0, 0.6);
+$paragraphColor: #3e5569;
+$tedColor: rgb(192, 57, 43);	
+
+// Smartphones
+$screen-sm-max: 414px;
+
+// Small tablets (portrait view) and smartphones (landscape view)
+$screen-md-max: 768px;
+
+// Tablets and small desktops
+$screen-lg-max: 1024px;
+
+// Large tablets and desktops
+$screen-xl-min: 1025px;
+
+// Small devices
+@mixin sm {
+	@media (max-width: #{$screen-sm-max}) {
+		@content;
+	}
+}
+
+// Medium devices
+@mixin md {
+	@media (max-width: #{$screen-md-max}) {
+		@content;
+	}
+}
+
+// Large devices
+@mixin lg {
+	@media (max-width: #{$screen-lg-max}) {
+		@content;
+	}
+}
+
+// Extra large devices
+@mixin xl {
+	@media (min-width: #{$screen-xl-min}) {
+		@content;
+	}
+}
+
+// Custom devices
+@mixin rwd-max($screen) {
+	@media (max-width: $screen + 'px') {
+		@content;
+	}
+}
+
+@mixin rwd-min($screen) {
+	@media (min-width: $screen + 'px') {
+		@content;
+	}
+}
+
+@mixin ar-min($ratio) {
+	@media (min-aspect-ratio: $ratio) {
+		@content;
+	}
+}
+
+@mixin ar-max($ratio) {
+	@media (max-aspect-ratio: $ratio) {
+		@content;
+	}
+}
+
+@mixin container {
+	max-width: 95%;
+	margin: auto;
+	@media (min-width: 1920px) {
+		max-width: 1807px;
+	}
+}

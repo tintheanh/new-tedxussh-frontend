@@ -1,0 +1,32 @@
+@import '../../../styles/global.scss';
+
+.cover {
+    width: 100%;
+    height: 60vh;
+    position: relative;
+
+	.image {
+        width: 100%;
+        height: 100% !important;
+        object-fit: cover;
+		position: absolute;
+		top: 0;
+        left: 0;
+    }
+    
+    .wrapper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        .title {
+            color: $white;
+            font-size: 36px;
+            margin: 0 40vw;
+            text-align: center;
+            z-index: 1000;
+        }
+    }
+}
